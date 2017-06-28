@@ -1,49 +1,72 @@
-## 新养车之家
+## 汽车之家车服务前端博客
 
-当前版本v1.0版本
+Vue2, Vue SSR, Koa2, MongoDB and Redis
 
-### 项目文件的划分：
+前后端分离 + 服务端渲染的博客系统, 前端SPA + 后端RESTful服务器
 
-```
-├── bin/     启动目录
-├── build/   webpack配置目录
-├── src/ 前端文件目录
-    ├── api/    api接口目录
-    ├── assets/ 静态文件目录（sass、images）
-    ├── components/ 组件文件目录
-    ├── filters/ 过滤器文件目录
-    ├── tool/ 工具方法目录
-    ├── router/  路由文件目录
-    ├── views/   vue模板文件
-    ├── vuex/    vuex相关文件
+# Demo 
+前端：[http://wangshiyang.com)
 
-	
-前端框架： Vue2.1.0
+后台管理截图：暂无 
 
-后端服务器：Node6.3
+目录
+=================
 
-自动化构建工具：webpack2.2.0 && gulp
+* [TODO](#todo)
+* [构建与部署](#构建与部署)
+  * [前置](#前置)
+  * [server](#server)
+  * [front](#front)
+  * [admin](#admin)
+* [后端RESTful API](#后端restful-api)
+  * [说明](#说明)
+  * [HTTP动词](#http动词)
+  * [权限验证](#权限验证)
+      * [获得Token](#获得token)
+      * [撤销Token](#撤销token)
+      * [Token说明](#token说明)
+  * [查询](#查询)
+  * [新建](#新建)
+  * [替换](#替换)
+  * [更新](#更新)
+  * [删除](#删除)  
 
-```
-**构建开发环境**
+  
+  # TODO
+- [x] 前台单页
+  - [x] vue2.0
+  - [x] vuex状态管理
+  - [x] vue SSR服务端渲染
+  - [x] 客户端谷歌统计 
+  - [x] 组件级缓存
+  - [x] Loading组件
+  - [x] 侧边栏图片
+  - [x] 文章toc
+  - [x] 页面meta
+  - [x] SSR服务端不可用时进行降级
+- [x] 后台管理单页
+  - [x] vue2.0
+  - [x] 使用element ui
+  - [x] 七牛云图片上传
+  - [x] 文章toc的生成与编辑
+  - [x] 草稿的自动生成与手动恢复
+  - [x] 上传图片后指定img标签的高度以避免闪烁
+  - [x] 扫描所有文章，指定img高度
+- [x] RESTful服务器
+  - [x] RESTful添加select字段过滤
+  - [x] 标签及分类移至文章中 
+  - [x] 七牛access_token下发及鉴权
+  - [x] lint
 
-``npm run dev``
+  
+# 构建与部署
 
-**对文件进行编译打包**
+- Node v6
+- webpack
+- pm2
+- MongoDB
+- Redis
 
-``npm run build``
-
-**发布上传静态资源到测试CDN服务器，并添加域名**
-
-``npm run deploy``（必须先执行npm run build命令）
-
-**发布上传静态资源到正式CDN服务器，并添加域名**
-
-``npm run build:deploy``（必须先执行npm run build命令）
-
-**构建生产环境**
-
-``npm run production``
 
 
 
